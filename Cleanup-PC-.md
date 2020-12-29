@@ -27,8 +27,4 @@ To remove individual computers:
 
 
 
-----
 
-More Info:
-
-https://petri.com/find-remove-inactive-accounts-from-active-directory-powershell
