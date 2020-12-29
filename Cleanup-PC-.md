@@ -2,7 +2,7 @@
 
 To get list of all computers with last time accessed
 
-`get-adcomputer -filter * -properties passwordlastset | select name, passwordlastset | sort passwordlastset`
+    get-adcomputer -filter * -properties passwordlastset | select name, passwordlastset | sort passwordlastset
 
 Remove older than 90 days:
 
@@ -18,3 +18,12 @@ Then run
 And to clean up
 
     get-adcomputer -filter {passwordlastset -lt $date} -properties passwordlastset | remove-adobject -recursive -verbose -confirm:$false
+    
+    
+To remove individual computers:
+
+    remove-adcomputer -identity **computer name here**
+
+
+
+
