@@ -2,7 +2,7 @@
 
 To get list of all computers with last time accessed
 
-    get-adcomputer -filter * -properties passwordlastset | select name, passwordlastset | sort passwordlastset
+`get-adcomputer -filter * -properties passwordlastset | select name, passwordlastset | sort passwordlastset`
 
 Remove older than 90 days:
 
@@ -22,8 +22,13 @@ And to clean up
     
 To remove individual computers:
 
-    remove-adcomputer -identity **computer name here**
+    remove-adcomputer -identity **"computer name here"**
 
 
 
 
+----
+
+More Info:
+
+https://petri.com/find-remove-inactive-accounts-from-active-directory-powershell
