@@ -4,9 +4,9 @@ To get list of all computers with last time accessed
 
 `get-adcomputer -filter * -properties passwordlastset | select name, passwordlastset | sort passwordlastset`
 
-Remove older than 90 days:
+Remove older than 60 days:
 
-    $date = (get-date).adddays(-90)
+    $date = (get-date).adddays(-60)
 
 Then run
 
