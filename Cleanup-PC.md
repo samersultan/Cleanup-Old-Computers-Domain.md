@@ -8,14 +8,14 @@ Remove older than 60 days:
 
     $date = (get-date).adddays(-60)
 
-Then run
+Then run:
 
 
     get-adcomputer -filter {passwordlastset -lt $date} -properties passwordlastset | select name, passwordlastset | sort passwordlastset
 
 
 
-And to clean up
+And to clean up:
 
     get-adcomputer -filter {passwordlastset -lt $date} -properties passwordlastset | remove-adobject -recursive -verbose -confirm:$false
     
